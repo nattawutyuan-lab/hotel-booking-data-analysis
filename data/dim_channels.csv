@@ -1,5 +1,0 @@
-﻿channel_id,channel_name,channel_type,commission_type,base_commission_rate
-1,Direct Website,Direct,None,0
-2,Booking.com,OTA,Percentage,0.18
-3,Expedia,OTA,Percentage,0.2
-4,Agoda,OTA,Percentage,0.22
