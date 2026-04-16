@@ -1,0 +1,6 @@
+﻿rate_code,rate_name,is_commissionable
+RACK,Standard Rate,TRUE
+PROMO10,Promotion 10%,TRUE
+PROMO20,Promotion 20%,TRUE
+CORP,Corporate Rate,FALSE
+FLASH,Flash Sale,TRUE
