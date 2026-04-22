@@ -123,119 +123,170 @@ Commission Waste
 ---
 
 
-นี่คือเนื้อหาไฟล์ README.md ที่นำอีโมจิออกทั้งหมดแล้วครับ
-
-The Azure Stay Dilemma: Hotel Booking Data Analysis
-การวิเคราะห์ข้อมูลเพื่อปรับสมดุลช่องทางการจัดจำหน่ายและเพิ่มกำไรสุทธิให้กับโรงแรม Azure Stay
-
 Section 1: Strategic Alignment
 Background & Pain Points (ความท้าทายของโรงแรม)
-ปัจจุบันโรงแรม Azure Stay กำลังเผชิญกับปัญหา ต้นทุนการจัดจำหน่ายที่สูงเกินไป (High Distribution Costs) แม้โรงแรมจะสามารถขายห้องพักได้และมียอดจอง (Volume) เข้ามาอย่างต่อเนื่อง แต่กลับต้องสูญเสียรายได้ไปกับค่าคอมมิชชันจำนวนมหาศาลให้กับตัวแทนขายออนไลน์ (OTAs เช่น Expedia หรือ Booking.com) ส่งผลให้เกิดภาวะ "รายได้สูงแต่กำไรสุทธิต่ำ" (Profit Margin Erosion) โปรเจกต์นี้จึงเกิดขึ้นเพื่อวิเคราะห์เจาะลึกและระบุอย่างชัดเจนว่า ช่องทางใดคือช่องทางที่สร้าง "กำไรสุทธิ (Net Revenue)" ให้กับธุรกิจอย่างแท้จริง เพื่ออุดรอยรั่วไหลของกำไร
+
+ปัจจุบันโรงแรม Azure Stay กำลังเผชิญกับปัญหา ต้นทุนการจัดจำหน่ายที่สูงเกินไป (High Distribution Costs) แม้โรงแรมจะสามารถขายห้องพักได้และมียอดจอง (Volume) เข้ามาอย่างต่อเนื่อง แต่กลับต้องสูญเสียรายได้ไปกับค่าคอมมิชชันจำนวนมหาศาลให้กับตัวแทนขายออนไลน์ (OTAs เช่น Expedia หรือ Booking.com)
+
+ส่งผลให้เกิดภาวะ “รายได้สูง แต่กำไรสุทธิต่ำ” (Profit Margin Erosion)
+
+โปรเจกต์นี้จึงถูกสร้างขึ้นเพื่อวิเคราะห์เชิงลึก และระบุให้ชัดเจนว่า ช่องทางใดสร้างกำไรสุทธิ (Net Revenue) ให้กับธุรกิจอย่างแท้จริง เพื่ออุดรอยรั่วไหลของกำไร และเพิ่มประสิทธิภาพการขายห้องพัก
 
 SMART Objectives
-S (Specific): ปรับสมดุลสัดส่วนช่องทางการจัดจำหน่าย (Channel Mix Optimization) โดยลดการพึ่งพายอดจองจาก OTAs ที่มีค่าคอมมิชชันสูง และเพิ่มสัดส่วนยอดจองผ่านช่องทางตรง (Direct Channel) หรือช่องทางที่มีต้นทุนต่ำกว่า
+S — Specific
 
-M (Measurable): เพิ่มรายได้สุทธิต่อห้องพักที่เปิดขาย (Net RevPAR) ให้สูงขึ้น 10% และลดสัดส่วนต้นทุนค่าคอมมิชชันโดยรวมลง 5%
+ปรับสมดุลสัดส่วนช่องทางการจัดจำหน่าย (Channel Mix Optimization) โดยลดการพึ่งพาช่องทาง OTA ที่มีค่าคอมมิชชันสูง และเพิ่มยอดจองผ่านช่องทางตรง (Direct Channel) หรือช่องทางต้นทุนต่ำ
 
-A (Achievable): วิเคราะห์ข้อมูลเพื่อหา Profitable Channels และใช้กลยุทธ์จำกัดโควตาห้องพัก (Inventory Control) ในช่องทางที่กำไรน้อย เพื่อนำโควตานั้นไปจัดโปรโมชันเพิ่มแรงจูงใจในช่องทางที่กำไรสูง
+M — Measurable
+เพิ่ม Net RevPAR สูงขึ้น 10%
+ลดต้นทุนค่าคอมมิชชันรวมลง 5%
+A — Achievable
 
-R (Relevant): สอดคล้องกับเป้าหมายสูงสุดของ Azure Stay ในการเพิ่มประสิทธิภาพการทำกำไรสูงสุด (Maximize Net Revenue) และควบคุมต้นทุนการได้มาซึ่งลูกค้า (Cost of Acquisition)
+ใช้ข้อมูลเพื่อหา Profitable Channels และจัดสรรโควตาห้องพักใหม่ โดยลดห้องในช่องทางกำไรต่ำ และเพิ่มในช่องทางกำไรสูง
 
-T (Time-bound): เริ่มดำเนินการและวัดผลสำเร็จของการปรับกลยุทธ์ช่องทางการขายได้ภายใน 1 ไตรมาส (3 เดือน)
+R — Relevant
+
+สอดคล้องกับเป้าหมายหลักของ Azure Stay คือ
+
+เพิ่มกำไรสุทธิสูงสุด (Maximize Net Revenue)
+ควบคุมต้นทุนการได้มาซึ่งลูกค้า (Customer Acquisition Cost)
+T — Time-bound
+
+เริ่มดำเนินการและวัดผลสำเร็จได้ภายใน 1 ไตรมาส (3 เดือน)
 
 Section 2: Analytical Design
-Hypothesis & Method (สมมติฐานและวิธีการคำนวณ)
-1. ช่องทาง Direct (เว็บโรงแรม) ทำกำไรสุทธิต่อห้อง (Net ADR) ได้สูงกว่าช่องทาง OTA อย่างชัดเจน
+Hypothesis & Method (สมมติฐานและวิธีการวิเคราะห์)
+1. ช่องทาง Direct ทำกำไรสุทธิต่อห้องสูงกว่า OTA
+สูตรคำนวณ
 
-Net ADR (OTA): Sum(net_room_revenue) / Count(booking_id) (เฉพาะ channel_type = 'OTA')
+Net ADR (OTA)
 
-Net ADR (Direct): Sum(net_room_revenue) / Count(booking_id) (เฉพาะ channel_type = 'Direct')
+Sum(net_room_revenue) / Count(booking_id)
+เฉพาะ channel_type = 'OTA'
 
-จุดตัดสินใจ: หากส่วนต่างเป็นบวกและคุ้มค่า ควรเพิ่มสัดส่วนโควตาห้องพักให้กับฝั่ง Direct
+Net ADR (Direct)
 
-2. ช่องทางที่คิดค่าคอมมิชชันแบบ 'จ่ายเหมา (Flat Fee)' คุ้มค่ากว่าแบบ 'หักเปอร์เซ็นต์ (Percentage)'
+Sum(net_room_revenue) / Count(booking_id)
+เฉพาะ channel_type = 'Direct'
+จุดตัดสินใจ
 
-Cost % (Flat Fee): [ Sum(commission_amount) / Sum(gross_room_revenue) ] * 100 (เฉพาะ commission_model = 'Flat Fee')
+หาก Direct สูงกว่าอย่างมีนัยสำคัญ ควรเพิ่มโควตาห้องพักให้ช่องทาง Direct
 
-Cost % (Percentage): [ Sum(commission_amount) / Sum(gross_room_revenue) ] * 100 (เฉพาะ commission_model = 'Percentage')
+2. Flat Fee คุ้มค่ากว่า Percentage
+สูตรคำนวณ
 
-จุดตัดสินใจ: เปรียบเทียบสัดส่วน % ต้นทุน ช่องทางใดต่ำกว่าควรผลักดันการจองผ่านช่องทางนั้น
+Cost % (Flat Fee)
 
-3. ช่องทางที่มี Cancellation Rate สูง ทำให้โรงแรมเสียโอกาสขายห้องให้ลูกค้าที่จ่ายแพงกว่า
+[ Sum(commission_amount) / Sum(gross_room_revenue) ] × 100
+เฉพาะ commission_model = 'Flat Fee'
 
-Cancellation Rate by Channel: COUNT(booking_id WHERE status = 'Cancelled') / COUNT(Total booking_id) (Group by channel_id)
+Cost % (Percentage)
 
-GitHub Documentation: hotel-booking-data-analysis/data at main · nattawutyuan-lab/hotel-booking-data-analysis
+[ Sum(commission_amount) / Sum(gross_room_revenue) ] × 100
+เฉพาะ commission_model = 'Percentage'
+จุดตัดสินใจ
+
+ช่องทางใดมีต้นทุนต่ำกว่า ควรผลักดันยอดจองผ่านช่องทางนั้น
+
+3. ช่องทางที่ยกเลิกสูง ทำให้เสียโอกาสขายห้อง
+สูตรคำนวณ
+Cancellation Rate by Channel =
+COUNT(booking_id WHERE status = 'Cancelled')
+/
+COUNT(Total booking_id)
+GROUP BY channel_id
+จุดตัดสินใจ
+
+ช่องทางที่ยกเลิกสูงควรถูกจำกัด Inventory หรือปรับนโยบายการจอง
 
 Section 3: Data Execution & EDA
-ข้อมูลจำลองที่ใช้ในการวิเคราะห์ถูกออกแบบมาให้มีความสอดคล้องกัน ประกอบด้วย 4 ตารางหลัก ดังนี้:
 
-Table 1: fact_bookings (The Transaction Data)
-booking_id (PK): รหัสการจอง
+ข้อมูลจำลองที่ใช้ในการวิเคราะห์ถูกออกแบบให้สอดคล้องกับธุรกิจโรงแรม ประกอบด้วย 4 ตารางหลัก
 
-booking_date / check_in_date: วันที่จอง และ วันที่เข้าพัก
-
-channel_id (FK) / rate_code_id (FK): อ้างอิงช่องทางและรหัสราคา
-
-gross_room_revenue: รายได้รวมที่ลูกค้าจ่าย (ก่อนหักคอมมิชชัน)
-
-commission_amount: ต้นทุนค่าคอมมิชชันสำหรับการจองนี้
-
-net_room_revenue: gross_room_revenue - commission_amount (รายได้สุทธิ)
-
-status: Confirmed, Cancelled, Checked-Out
-
-Table 2: dim_channels (The Cost Definitions)
-channel_id (PK) / channel_name / channel_type: รหัส, ชื่อ, และประเภทช่องทาง (เช่น OTA, Direct)
-
-commission_model: ประเภทการคิดค่าใช้จ่าย (Percentage, Flat Fee, Net Rate)
-
-default_commission_rate: อัตราค่าธรรมเนียมมาตรฐาน
-
-contract_owner: ผู้จัดการฝ่ายขายที่ดูแลช่องทางนั้นๆ
-
+Table 1: fact_bookings (Transaction Data)
+Field	Description
+booking_id (PK)	รหัสการจอง
+booking_date	วันที่จอง
+check_in_date	วันที่เข้าพัก
+channel_id (FK)	อ้างอิงช่องทางการขาย
+rate_code_id (FK)	อ้างอิงประเภทราคา
+gross_room_revenue	รายได้ก่อนหักคอมมิชชัน
+commission_amount	ค่าคอมมิชชัน
+net_room_revenue	รายได้สุทธิ
+status	Confirmed / Cancelled / Checked-Out
+Table 2: dim_channels (Cost Definitions)
+Field	Description
+channel_id (PK)	รหัสช่องทาง
+channel_name	ชื่อช่องทาง
+channel_type	OTA / Direct
+commission_model	Percentage / Flat Fee / Net Rate
+default_commission_rate	อัตราค่าธรรมเนียม
+contract_owner	ผู้ดูแลช่องทาง
 Table 3: dim_rate_codes
-rate_code_id (PK) / rate_name: รหัสและชื่อประเภทราคา (เช่น RT_CORP)
-
-is_commissionable: ระบุว่าราคานี้มีการหักคอมมิชชันหรือไม่ (True/False)
-
-Table 4: fact_marketing_spend (The True Cost of Direct Channels)
-spend_id (PK) / spend_date: รหัสและวันที่ใช้งบการตลาด
-
-channel_id (FK): อ้างอิงช่องทาง (เน้นไปที่ Direct Website)
-
-platform: แพลตฟอร์มที่ลงโฆษณา (Google Ads, Facebook)
-
-cost_amount: จำนวนเงินที่จ่ายไป
-
-clicks: จำนวนคลิกที่ได้รับจากโฆษณา
-
+Field	Description
+rate_code_id (PK)	รหัสราคา
+rate_name	ชื่อราคา
+is_commissionable	มีคอมมิชชันหรือไม่
+Table 4: fact_marketing_spend
+Field	Description
+spend_id (PK)	รหัสรายการใช้จ่าย
+spend_date	วันที่ใช้จ่าย
+channel_id (FK)	ช่องทางอ้างอิง
+platform	Google Ads / Facebook
+cost_amount	ค่าใช้จ่าย
+clicks	จำนวนคลิก
 Section 4: Insights & Impact
-จากการสำรวจข้อมูล (EDA) และเชื่อมโยงข้อมูลรายได้ ต้นทุน และช่องทาง พบข้อมูลเชิงลึก (Insights) และข้อเสนอแนะดังนี้:
+Insight 1: ต้นทุนแฝงที่กลืนกินกำไร
+The Commission Trap
 
-Insight 1: ต้นทุนแฝงที่กลืนกินกำไร (The Commission Trap)
-แม้ช่องทางประเภท OTA จะสร้างยอดการจอง (Volume) ได้สูงที่สุด แต่กลับพบว่ากำไรสุทธิหายไปอย่างมีนัยสำคัญเนื่องจาก Commission Rate ที่สูงถึง 15-20% ต่างจากช่องทาง Direct Web ที่ไม่มีค่าคอมมิชชัน (0%) และมีอัตราการยกเลิกต่ำ ซึ่งสะท้อนถึงลูกค้าที่มี "ความตั้งใจเข้าพักจริง" (High Booking Quality)
+แม้ OTA จะสร้างยอดจองสูงที่สุด แต่กำไรสุทธิลดลงอย่างมาก เพราะมีค่าคอมมิชชันสูงถึง 15–20%
 
-Recommendation: ปรับกลยุทธ์งบการตลาดและกระตุ้นยอด Direct Booking
+ในขณะที่ Direct Web ไม่มีค่าคอมมิชชัน และมีอัตราการยกเลิกต่ำกว่า
 
-Action: โยกย้ายงบที่เสียไปกับคอมมิชชัน OTA มาทำแคมเปญกระตุ้นการจองตรง (Direct Web) เช่น โค้ดส่วนลด 5-10% หรือให้สิทธิพิเศษ (Free Breakfast) พร้อมทำ A/B Testing ปรับปรุงหน้าเว็บ (UI/UX) ให้จองง่ายขึ้น
+Recommendation
 
-Impact: ลดต้นทุนค่าคอมมิชชันในระยะยาว และเก็บ First-party data ของลูกค้าไว้ทำการตลาดแบบ Personalized ต่อไป
+เพิ่มงบการตลาดเพื่อกระตุ้น Direct Booking
 
-Insight 2: ปัญหาการยกเลิกการจองจากราคาโปรโมชัน (The Promotional Cancellation Trap)
-เมื่อวิเคราะห์ "ประเภทราคา" และ "สถานะการจอง" พบว่าราคาประเภท "Promotional" มีอัตราการยกเลิกสูงผิดปกติถึง 24.5% สะท้อนพฤติกรรม "จองกั๊ก" ของกลุ่ม Serial Cancellers ทำให้โรงแรมเสียโอกาสขายห้องให้ลูกค้าจริง (Opportunity Cost)
+Action
+แจกโค้ดส่วนลด 5–10%
+ฟรีอาหารเช้า
+ปรับหน้าเว็บให้จองง่ายขึ้น
+ทำ A/B Testing
+Impact
+ลดต้นทุนระยะยาว
+เก็บ First-party Data ของลูกค้าได้เอง
+Insight 2: ปัญหาการยกเลิกจากราคาโปรโมชัน
+The Promotional Cancellation Trap
 
-Recommendation: ปรับเปลี่ยนนโยบายการยกเลิกให้รัดกุมขึ้น
+ราคาประเภท Promotional มีอัตราการยกเลิกสูงถึง 24.5%
 
-Action: ปรับเงื่อนไขราคา Promotional เป็นแบบ "Non-refundable" (ไม่สามารถขอคืนเงินได้) หรือบังคับชำระมัดจำล่วงหน้า 30-50% ทันทีเมื่อทำรายการ
+สะท้อนพฤติกรรมลูกค้ากลุ่ม “จองกั๊ก”
 
-Impact: สกัดกั้นกลุ่มลูกค้าจองกั๊ก คัดกรองเฉพาะผู้ที่ตั้งใจเข้าพักจริง ทำให้การพยากรณ์รายได้ (Revenue Forecasting) แม่นยำขึ้น และลดปัญหาห้องว่างกะทันหัน
+Recommendation
 
-Insight 3: คุณภาพของการจองแยกตามช่องทาง (Booking Quality by Channel)
-กลุ่มลูกค้า Corporate Rate และ B2B (Wholesalers) มีอัตราการยกเลิกที่ ต่ำมาก เมื่อเทียบกับลูกค้ารายย่อย (Leisure) และมีแนวโน้มความต้องการเข้าพักที่สม่ำเสมอตลอดทั้งปี
+ปรับเงื่อนไขราคาให้รัดกุมขึ้น
 
-Recommendation: สร้างแคมเปญร่วมกับกลุ่มลูกค้าองค์กร (B2B/Corporate)
+Action
+เปลี่ยนเป็น Non-refundable
+ชำระมัดจำล่วงหน้า 30–50%
+Impact
+ลดการจองหลอก
+Forecast รายได้แม่นยำขึ้น
+ลดปัญหาห้องว่างกะทันหัน
+Insight 3: คุณภาพการจองแยกตามช่องทาง
+Booking Quality by Channel
 
-Action: ให้ทีมขาย (Contract Owners) โฟกัสการทำสัญญากับบริษัท หรือทำ Tiered Pricing (ยอดจองถึงเป้า ได้ส่วนลดพิเศษ) ผ่านช่องทาง GDS หรือ Hotelbeds
+ลูกค้ากลุ่ม Corporate Rate และ B2B / Wholesalers มีอัตรายกเลิกต่ำ และจองสม่ำเสมอตลอดปี
 
-Impact: สร้างกระแสเงินสดที่มั่นคง (Stable Cash Flow) ช่วยอุดรอยรั่วและรักษารายได้ในช่วง Low Season ที่ลูกค้ารายย่อยมักจะมีจำนวนลดลง
+Recommendation
+
+เพิ่มความร่วมมือกับกลุ่มองค์กร
+
+Action
+ทำสัญญากับบริษัทต่าง ๆ
+ทำ Tiered Pricing
+ขยายผ่าน GDS / Hotelbeds
+Impact
+กระแสเงินสดมั่นคง
+รักษารายได้ช่วง Low Season
+ลดการพึ่งพาลูกค้ารายย่อย
