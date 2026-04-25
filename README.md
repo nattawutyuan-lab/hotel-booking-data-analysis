@@ -63,7 +63,6 @@ T (Time-bound): วัดผลภายใน 1 ไตรมาส (3 เดื
 | Field | Description |
 |---|---|
 | `booking_id` (PK) | รหัสการจอง |
-
 | `booking_date` | วันที่จอง |
 | `check_in_date` | วันที่เข้าพัก |
 | `channel_id` (FK) | อ้างอิงช่องทางการขาย |
