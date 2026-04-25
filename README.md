@@ -55,7 +55,8 @@ T (Time-bound): วัดผลภายใน 1 ไตรมาส (3 เดื
   * คำนวณหาอัตราการยกเลิก `Cancellation Rate by Channel/Rate` `(Cancelled / Total Bookings)` ในแต่ละช่องทางและประเภทราคา
 * **เกณฑ์ตัดสินใจ:** * หาก Demand ในช่วงสุดสัปดาห์สูงจนห้องเกือบเต็มอยู่แล้ว ควรลดโควตาห้องพักฝั่ง OTA เพื่อลด Commission Waste ที่ไม่จำเป็น
   * หากช่องทางใดหรือราคาประเภทใดมีอัตราการยกเลิกสูง ควรจำกัด Inventory หรือปรับนโยบายการจองให้รัดกุมขึ้น (เช่น บังคับจ่ายมัดจำ หรือทำเป็น Non-refundable)
-<img width="1784" height="584" alt="image" src="https://github.com/user-attachments/assets/b6e433dc-7f10-47bf-a674-650c45f4f4ed" />
+<img width="1783" height="584" alt="image" src="https://github.com/user-attachments/assets/8e69e03f-4d20-4842-b268-4885fba664cb" />
+
 
 ---
 
