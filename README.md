@@ -15,9 +15,17 @@
 
 ## วัตถุประสงค์ (SMART Objectives)
 S (Specific): ปรับสัดส่วนช่องทางการจัดจำหน่ายห้องพักโดยเพิ่มการเข้าพักของ Direct Booking
+
+
 M (Measurable): เพิ่ม Net RevPAR 10%, ลดค่า Commission&Marketing รวมกัน 15%
+
+
 A (Achievable): ใช้ข้อมูลการเข้าพักย้อนหลังเพื่อทำ Customer Segmentation และระบุกลุ่มลูกค้าที่มีโอกาสจองตรงสูง
+
+
 R (Relevant): เพื่อลดการพึ่งพา OTA และเพิ่มกำไรสุทธิสูงสุด
+
+
 T (Time-bound): วัดผลภายใน 1 ไตรมาส (3 เดือน)
 
 ---
