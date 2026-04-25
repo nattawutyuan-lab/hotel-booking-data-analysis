@@ -36,6 +36,8 @@ T (Time-bound): วัดผลภายใน 1 ไตรมาส (3 เดื
 * **สมมติฐาน:** ช่องทาง Direct ทำกำไรสุทธิต่อห้อง (Net ADR) ได้สูงกว่าช่องทาง OTA อย่างมีนัยสำคัญ
 * **วิธีวิเคราะห์:** เปรียบเทียบ `Net ADR (OTA)` กับ `Net ADR (Direct)` 
 * **เกณฑ์ตัดสินใจ:** หากส่วนต่างของ Net ADR (Direct) สูงกว่าชัดเจน ควรดึงโควตาห้องพักมาฝั่ง Direct ให้มากขึ้น
+  <img width="715" height="492" alt="image" src="https://github.com/user-attachments/assets/616822b7-4b44-4be8-9131-1af63c1d3582" />
+
 
 ### 2. Commission Model Efficiency
 * **สมมติฐาน:** การจ่ายค่าคอมมิชชันแบบ **Flat Fee** ต้นทุนต่ำกว่าและคุ้มค่ากว่าแบบ **Percentage**
