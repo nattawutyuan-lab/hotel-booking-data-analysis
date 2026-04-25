@@ -76,10 +76,21 @@ T (Time-bound): วัดผลภายใน 1 ไตรมาส (3 เดื
 | `commission_model` | Percentage / Flat Fee / Net Rate / Merchant |
 | `default_commission_rate` | อัตราค่าธรรมเนียม |
 
-### Table 3: `dim_rate_codes` & Table 4: `fact_marketing_spend`
-* **`dim_rate_codes`**: เก็บข้อมูลรหัสราคา (`rate_code_id`), ชื่อราคา, และเงื่อนไขว่าคิดคอมมิชชันหรือไม่ (`is_commissionable`)
-* **`fact_marketing_spend`**: เก็บข้อมูลค่าใช้จ่ายทางการตลาด ประกอบด้วย วันที่, รหัสช่องทางโฆษณา (Google Ads / Facebook), ค่าใช้จ่าย (`cost_amount`), และจำนวนคลิก (`clicks`)
+### Table 3: `dim_rate_codes` (Rate Conditions)
+| Field | Description |
+|---|---|
+| `rate_code_id` (PK) | รหัสราคา |
+| `rate_name` | ชื่อราคา |
+| `is_commissionable` | เงื่อนไขว่าคิดคอมมิชชันหรือไม่ |
 
+### Table 4: `fact_marketing_spend` (Marketing Costs)
+| Field | Description |
+|---|---|
+| `spend_id` (PK) | รหัสรายการใช้จ่าย |
+| `spend_date` | วันที่ใช้จ่าย |
+| `channel_id` (FK) | รหัสช่องทางโฆษณา (Google Ads / Facebook) |
+| `cost_amount` | ค่าใช้จ่ายทางการตลาด |
+| `clicks` | จำนวนคลิกที่ได้รับ |
 ---
 
 ## การสำรวจและวิเคราะห์ข้อมูล (Exploratory Data Analysis - EDA)
