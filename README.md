@@ -269,8 +269,8 @@ GROUP BY channel_id
 | ----------------------- | -------------------------------- |
 | channel_id (PK)         | รหัสช่องทาง                      |
 | channel_name            | ชื่อช่องทาง                      |
-| channel_type            | OTA / Direct                     |
-| commission_model        | Percentage / Flat Fee / Net Rate |
+| channel_type            | OTA / Direct / Wholesale                     |
+| commission_model        | Percentage / Flat Fee / Net Rate / Merchant |
 | default_commission_rate | อัตราค่าธรรมเนียม                |
 | contract_owner          | ผู้ดูแลช่องทาง                   |
 
