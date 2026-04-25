@@ -43,6 +43,8 @@ T (Time-bound): วัดผลภายใน 1 ไตรมาส (3 เดื
 * **สมมติฐาน:** การจ่ายค่าคอมมิชชันแบบ **Flat Fee** ต้นทุนต่ำกว่าและคุ้มค่ากว่าแบบ **Percentage**
 * **วิธีวิเคราะห์:** คำนวณ `Cost %` ของแต่ละโมเดล `[Sum(commission_amount) / Sum(gross_room_revenue)] × 100`
 * **เกณฑ์ตัดสินใจ:** โมเดลใดมีต้นทุน % ต่ำกว่า ควรหาทางเจรจาหรือผลักดันยอดจองให้ไปตกที่โมเดลนั้น
+  <img width="784" height="483" alt="image" src="https://github.com/user-attachments/assets/2ef06c78-66c8-4537-adf6-3fe4eb149956" />
+
 
 ### 3. Opportunity Loss & Revenue Leakage (การสูญเสียรายได้จากค่าคอมมิชชันและอัตราการยกเลิก)
 หัวข้อนี้มุ่งเน้นการตรวจสอบรอยรั่วไหลของรายได้ใน 2 กรณีหลัก คือ การจ่ายคอมมิชชันโดยไม่จำเป็นในช่วงที่ Demand สูง และการเสียโอกาสขายห้องพักจากการยกเลิกการจอง
@@ -53,6 +55,7 @@ T (Time-bound): วัดผลภายใน 1 ไตรมาส (3 เดื
   * คำนวณหาอัตราการยกเลิก `Cancellation Rate by Channel/Rate` `(Cancelled / Total Bookings)` ในแต่ละช่องทางและประเภทราคา
 * **เกณฑ์ตัดสินใจ:** * หาก Demand ในช่วงสุดสัปดาห์สูงจนห้องเกือบเต็มอยู่แล้ว ควรลดโควตาห้องพักฝั่ง OTA เพื่อลด Commission Waste ที่ไม่จำเป็น
   * หากช่องทางใดหรือราคาประเภทใดมีอัตราการยกเลิกสูง ควรจำกัด Inventory หรือปรับนโยบายการจองให้รัดกุมขึ้น (เช่น บังคับจ่ายมัดจำ หรือทำเป็น Non-refundable)
+<img width="1784" height="584" alt="image" src="https://github.com/user-attachments/assets/b6e433dc-7f10-47bf-a674-650c45f4f4ed" />
 
 ---
 
@@ -94,19 +97,23 @@ T (Time-bound): วัดผลภายใน 1 ไตรมาส (3 เดื
 ### 1. True Net ADR Comparison (Direct vs OTA)
 * **เป้าหมาย:** เจาะลึกเปรียบเทียบกำไรต่อบุ๊กกิ้ง (Net ADR) ระหว่างช่องทาง Direct และ OTA โดยหักลบ "ต้นทุนแฝงทั้งหมด" ได้แก่ ค่าคอมมิชชันและค่าการตลาด (Marketing Spend / CAC)
 * **การนำเสนอ:** ใช้ **Bar Chart** เปรียบเทียบเพื่อให้เห็นภาพชัดเจนว่าเมื่อนำต้นทุนค่าโฆษณาเฉลี่ยเข้าไปในแต่ละบุ๊กกิ้งแล้ว กำไรสุทธิต่อห้องที่แท้จริงเปลี่ยนไปอย่างไร
+<img width="984" height="584" alt="image" src="https://github.com/user-attachments/assets/bdeca9c0-22cf-4791-a77e-cdfe7dc7e3ab" />
 
 ### 2. Final Net Profit by Channel (After ALL Costs)
 * **เป้าหมาย:** หาผลกำไรที่แท้จริง (Contribution Margin) ของแต่ละช่องทาง โดยนำรายได้รวมมาหักออกด้วยต้นทุนผันแปรทั้งหมด
 * **การนำเสนอ:** ใช้ **Bar Chart** แบบเรียงลำดับ (Sorted) เพื่อระบุ "ผู้ชนะ" ในเชิงกำไรอย่างชัดเจน ช่วยให้ผู้บริหารตัดสินใจได้ทันทีว่าควรจัดสรรงบลงทุนในช่องทางใดต่อ
+<img width="984" height="584" alt="image" src="https://github.com/user-attachments/assets/cf2b36fb-ab05-4b65-88dd-4391b9875d8a" />
 
 ### 3. High Cancellation Channels Cause Revenue Loss (Cancellation Impact)
 * **เป้าหมาย:** ระบุช่องทางที่มีอัตราการยกเลิก (Cancellation Rate) สูง และประเมินการสูญเสียรายได้ (Lost Revenue) เพื่อหาช่องทางที่มีความเสี่ยงสูง (High-risk channel)
 * **ผลวิเคราะห์เบื้องต้น:** พบว่า OTA ยักษ์ใหญ่อย่าง Booking.com (30.8%) และ Expedia (28.6%) มีอัตราการยกเลิกสูงสุด นำไปสู่ความเสียหายด้านโอกาสทางรายได้มหาศาล ในขณะที่ Direct Web มีการยกเลิกเพียง 6.5%
 * **การนำเสนอ:** ใช้ **Bar Chart 2 กราฟควบคู่กัน** กราฟแรกแสดงระดับความเสี่ยง (Cancellation Rate) และกราฟที่สองแสดงผลกระทบทางธุรกิจ (Lost Revenue) เพื่อมิติการวิเคราะห์ที่ครบถ้วน
+<img width="984" height="584" alt="image" src="https://github.com/user-attachments/assets/f753ac54-d8cc-4a00-9bd0-563f573eb8e0" />
 
 ### 4. Booking Volume and Quality by Channel
 * **เป้าหมาย:** ตรวจสอบ "คุณภาพของการจอง" โดยเปรียบเทียบปริมาณการจองที่เข้าพักสำเร็จ (Checked-Out) กับการจองที่ถูกยกเลิก (Cancelled)
 * **การนำเสนอ:** ใช้ **Grouped Bar Chart** เผยให้เห็น Insight สำคัญว่า ช่องทางที่สร้าง Volume ยอดจองได้สูงสุด มักเป็นช่องทางที่มีการยกเลิกสูงสุดตามไปด้วย สะท้อนพฤติกรรมการ "จองแบบเผื่อเลือก" ของฝั่ง OTA เมื่อเทียบกับ Direct Web ที่ลูกค้ามีความตั้งใจเข้าพักจริงมากกว่า
+<img width="1184" height="684" alt="image" src="https://github.com/user-attachments/assets/91dcf2d1-5458-47bd-832c-0377ba32b768" />
 
 ---
 
@@ -118,12 +125,14 @@ T (Time-bound): วัดผลภายใน 1 ไตรมาส (3 เดื
   * ทำแคมเปญแจกโค้ดส่วนลด 5–10% หรือแถมฟรีอาหารเช้า (Value Add) สำหรับลูกค้าที่จองตรง
   * ปรับปรุงหน้าเว็บไซต์ให้ทำรายการง่ายขึ้น
 * **Impact:** ลดต้นทุนในระยะยาว และเก็บ First-party Data ของลูกค้าได้เอง
+<img width="1184" height="683" alt="image" src="https://github.com/user-attachments/assets/e361fb52-3545-449c-b615-1f110330c37e" />
 
 ### Insight 2: The Promotional Cancellation Trap (ปัญหาการยกเลิกจากราคาโปรโมชัน)
 * **ปัญหา:** ราคาประเภท **Promotional** มีอัตราการยกเลิกสูงถึง **24.5%** สะท้อนพฤติกรรมลูกค้ากลุ่ม “จองกั๊ก” หรือ Serial Cancellers
 * **Action:** * ปรับเงื่อนไขราคาโปรโมชันให้รัดกุมขึ้น เช่น เปลี่ยนเป็น **Non-refundable**
   * บังคับชำระมัดจำล่วงหน้า 30–50%
 * **Impact:** ลดปริมาณการจองหลอก (Opportunity Cost), Forecast รายได้แม่นยำขึ้น และลดปัญหาห้องว่างกะทันหันเสียโอกาสในการขาย
+<img width="976" height="583" alt="image" src="https://github.com/user-attachments/assets/2b6fb6ef-cf31-4e0a-ae22-6bb6eb1014f5" />
 
 ### Insight 3: Booking Quality by Channel (คุณภาพการจองของกลุ่ม B2B)
 * **ปัญหา/โอกาส:** พบว่าลูกค้ากลุ่ม **Corporate Rate** และ **B2B / Wholesalers** มีอัตราการยกเลิกต่ำที่สุด และมียอดจองสม่ำเสมอตลอดทั้งปี
@@ -131,3 +140,4 @@ T (Time-bound): วัดผลภายใน 1 ไตรมาส (3 เดื
   * ทำ Tiered Pricing จูงใจพาร์ทเนอร์
   * ขยายช่องทางเครือข่ายผ่าน GDS หรือ Hotelbeds
 * **Impact:** สร้างกระแสเงินสดที่มั่นคง ช่วยพยุงรายได้ในช่วง Low Season และลดการพึ่งพาลูกค้ารายย่อยจาก OTA เพียงอย่างเดียว
+<img width="1181" height="683" alt="image" src="https://github.com/user-attachments/assets/ac994764-ec5a-4e7f-a1ec-69961ac706f0" />
