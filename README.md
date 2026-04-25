@@ -14,11 +14,11 @@
 ---
 
 ## วัตถุประสงค์ (SMART Objectives)
-* **Specific:** ปรับสมดุลสัดส่วนช่องทางการจัดจำหน่าย ลดการพึ่งพา OTA ที่มีค่าคอมมิชชันสูง และเพิ่มยอดจองผ่านช่องทางตรง (Direct Channel)
-* **Measurable:** เพิ่ม Net RevPAR สูงขึ้น **10%** และลดต้นทุนค่าคอมมิชชันรวมลง **5%**
-* **Achievable:** ใช้ Data หา Profitable Channels เพื่อจัดสรรโควตาห้องพักใหม่
-* **Relevant:** สอดคล้องกับเป้าหมายหลักคือ Maximize Net Revenue และ Optimize Customer Acquisition Cost (CAC)
-* **Time-bound:** เริ่มดำเนินการและวัดผลสำเร็จได้ภายใน **1 ไตรมาส (3 เดือน)**
+S (Specific): ปรับสัดส่วนช่องทางการจัดจำหน่ายห้องพักโดยเพิ่มการเข้าพักของ Direct Booking
+M (Measurable): เพิ่ม Net RevPAR 10%, ลดค่า Commission&Marketing รวมกัน 15%
+A (Achievable): ใช้ข้อมูลการเข้าพักย้อนหลังเพื่อทำ Customer Segmentation และระบุกลุ่มลูกค้าที่มีโอกาสจองตรงสูง
+R (Relevant): เพื่อลดการพึ่งพา OTA และเพิ่มกำไรสุทธิสูงสุด
+T (Time-bound): วัดผลภายใน 1 ไตรมาส (3 เดือน)
 
 ---
 
