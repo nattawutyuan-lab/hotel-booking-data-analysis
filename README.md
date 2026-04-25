@@ -105,14 +105,14 @@ T (Time-bound): วัดผลภายใน 1 ไตรมาส (3 เดื
 ### 2. Final Net Profit by Channel (After ALL Costs)
 * **เป้าหมาย:** หาผลกำไรที่แท้จริง (Contribution Margin) ของแต่ละช่องทาง โดยนำรายได้รวมมาหักออกด้วยต้นทุนผันแปรทั้งหมด
 * **การนำเสนอ:** ใช้ **Bar Chart** แบบเรียงลำดับ (Sorted) เพื่อระบุ "ผู้ชนะ" ในเชิงกำไรอย่างชัดเจน ช่วยให้ผู้บริหารตัดสินใจได้ทันทีว่าควรจัดสรรงบลงทุนในช่องทางใดต่อ
-<img width="984" height="584" alt="image" src="https://github.com/user-attachments/assets/f753ac54-d8cc-4a00-9bd0-563f573eb8e0" />
+<img width="984" height="584" alt="image" src="https://github.com/user-attachments/assets/cf2b36fb-ab05-4b65-88dd-4391b9875d8a" />
 
 ### 3. High Cancellation Channels Cause Revenue Loss (Cancellation Impact)
 * **เป้าหมาย:** ระบุช่องทางที่มีอัตราการยกเลิก (Cancellation Rate) สูง และประเมินการสูญเสียรายได้ (Lost Revenue) เพื่อหาช่องทางที่มีความเสี่ยงสูง (High-risk channel)
 * **ผลวิเคราะห์เบื้องต้น:** พบว่า OTA ยักษ์ใหญ่อย่าง Booking.com (30.8%) และ Expedia (28.6%) มีอัตราการยกเลิกสูงสุด นำไปสู่ความเสียหายด้านโอกาสทางรายได้มหาศาล ในขณะที่ Direct Web มีการยกเลิกเพียง 6.5%
 * **การนำเสนอ:** ใช้ **Bar Chart 2 กราฟควบคู่กัน** กราฟแรกแสดงระดับความเสี่ยง (Cancellation Rate) และกราฟที่สองแสดงผลกระทบทางธุรกิจ (Lost Revenue) เพื่อมิติการวิเคราะห์ที่ครบถ้วน
 <img width="984" height="584" alt="image" src="https://github.com/user-attachments/assets/cf2b36fb-ab05-4b65-88dd-4391b9875d8a" />
-
+<img width="984" height="584" alt="image" src="https://github.com/user-attachments/assets/f753ac54-d8cc-4a00-9bd0-563f573eb8e0" />
 ### 4. Booking Volume and Quality by Channel
 * **เป้าหมาย:** ตรวจสอบ "คุณภาพของการจอง" โดยเปรียบเทียบปริมาณการจองที่เข้าพักสำเร็จ (Checked-Out) กับการจองที่ถูกยกเลิก (Cancelled)
 * **การนำเสนอ:** ใช้ **Grouped Bar Chart** เผยให้เห็น Insight สำคัญว่า ช่องทางที่สร้าง Volume ยอดจองได้สูงสุด มักเป็นช่องทางที่มีการยกเลิกสูงสุดตามไปด้วย สะท้อนพฤติกรรมการ "จองแบบเผื่อเลือก" ของฝั่ง OTA เมื่อเทียบกับ Direct Web ที่ลูกค้ามีความตั้งใจเข้าพักจริงมากกว่า
