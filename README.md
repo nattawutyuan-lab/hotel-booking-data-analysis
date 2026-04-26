@@ -1,3 +1,11 @@
+# CP372 Data Analytics and Business Intelligence Project
+
+## Azure Stay: High Distribution Costs (Channel Profitability)
+
+การวิเคราะห์เพื่อเพิ่มประสิทธิภาพช่องทางการจัดจำหน่ายและเพิ่มกำไรสุทธิสูงสุดให้กับธุรกิจโรงแรม
+
+---
+
 ## สมาชิกกลุ่ม
 * **6610201013** ณัฐวุฒิ เคลือบทอง
 * **66102010142** ธนัท กันหารี
