@@ -13,20 +13,12 @@
 
 ---
 
-## วัตถุประสงค์ (SMART Objectives)
-S (Specific): ปรับสัดส่วนช่องทางการจัดจำหน่ายห้องพักโดยเพิ่มการเข้าพักของ Direct Booking
-
-
-M (Measurable): เพิ่ม Net RevPAR 10%, ลดค่า Commission&Marketing รวมกัน 15%
-
-
-A (Achievable): ใช้ข้อมูลการเข้าพักย้อนหลังเพื่อทำ Customer Segmentation และระบุกลุ่มลูกค้าที่มีโอกาสจองตรงสูง
-
-
-R (Relevant): เพื่อลดการพึ่งพา OTA และเพิ่มกำไรสุทธิสูงสุด
-
-
-T (Time-bound): วัดผลภายใน 1 ไตรมาส (3 เดือน)
+## SMART Objectives
+- **S (Specific):** ปรับสัดส่วนช่องทางการจัดจำหน่ายห้องพักโดยเพิ่มการเข้าพักที่มีคุณภาพและลดต้นทุนแฝง
+- **M (Measurable):** เพิ่ม Net RevPAR 10% และ ลดค่า Commission & Marketing รวมกัน 15%
+- **A (Achievable):** ทำ Customer Segmentation ตามช่วงเวลา (Weekday/Weekend) และปรับนโยบายราคา (Rate Code) เพื่อป้องกันการยกเลิกห้อง
+- **R (Relevant):** ลดการพึ่งพา OTA สร้างฐานลูกค้าประจำ (Direct Booking) เพื่อเพิ่มอัตรากำไรสุทธิสูงสุด
+- **T (Time-bound):** วัดผลการเปลี่ยนแปลงและบรรลุเป้าหมายภายใน 1 ไตรมาส (3 เดือน)
 
 ---
 
@@ -51,46 +43,63 @@ T (Time-bound): วัดผลภายใน 1 ไตรมาส (3 เดื
 
 ---
 
-## โครงสร้างข้อมูล (Data Execution & Schema)
-ชุดข้อมูลประกอบด้วย 4 ตารางหลักที่จำลองในรูปแบบ **Star Schema**:
+## Data Dictionary (โครงสร้างแบบ Galaxy Schema / Fact Constellation)
 
-### Table 1: `fact_bookings` (Transaction Data)
-| Field | Description |
-|---|---|
-| `booking_id` (PK) | รหัสการจอง |
-| `booking_date` | วันที่จอง |
-| `check_in_date` | วันที่เข้าพัก |
-| `channel_id` (FK) | อ้างอิงช่องทางการขาย |
-| `rate_code_id` (FK)| อ้างอิงประเภทราคา |
-| `gross_room_revenue`| รายได้ก่อนหักคอมมิชชัน |
-| `commission_amount` | ค่าคอมมิชชัน |
-| `net_room_revenue` | รายได้สุทธิ |
-| `status` | Confirmed / Cancelled / Checked-Out |
+ชุดข้อมูลถูกออกแบบในลักษณะ **Galaxy Schema** เนื่องจากมี Fact Table 2 ตาราง (ยอดจอง และ ค่าโฆษณา) ที่ใช้งาน Dimension Table ร่วมกัน ประกอบไปด้วย:
 
-### Table 2: `dim_channels` (Cost Definitions)
-| Field | Description |
-|---|---|
-| `channel_id` (PK) | รหัสช่องทาง |
-| `channel_name` | ชื่อช่องทาง |
-| `channel_type` | OTA / Direct / Wholesale |
-| `commission_model` | Percentage / Flat Fee / Net Rate / Merchant |
-| `default_commission_rate` | อัตราค่าธรรมเนียม |
+### Table 1: `fact_bookings` (ตารางบันทึกการจอง)
+| Attribute | Description | Data Type | Valid Range/Example |
+| :--- | :--- | :--- | :--- |
+| `booking_id` (PK) | รหัสการจองห้องพักแต่ละรายการ | Nominal | BK_00001, BK_00050 |
+| `booking_date` | วันที่ทำการจอง | Interval (Date) | 2022-12-06, 2023-04-22 |
+| `check_in_date` | วันที่ลูกค้าเข้าพักจริง | Interval (Date) | 2023-01-10, 2023-05-11 |
+| `channel_id` (FK) | รหัสช่องทางการจัดจำหน่าย | Nominal | CH_01, CH_03 |
+| `Channel Name` | ชื่อช่องทาง (Denormalized) | Nominal | Booking.com, Walk-in |
+| `rate_code_id` (FK)| รหัสประเภทราคา/โปรโมชัน | Nominal | RT_RACK, RT_PROMO |
+| `gross_room_revenue`| รายได้รวมก่อนหักค่าใช้จ่าย (บาท) | Ratio (Continuous) | 2500, 8000 |
+| `Commission Rate` | อัตราค่าคอมมิชชันที่หัก (%) | Ratio (Continuous) | 0.15, 0.18, 0 |
+| `commission_amount` | จำนวนเงินค่าคอมมิชชัน (บาท) | Ratio (Continuous) | 450, 1440, 0 |
+| `net_room_revenue` | รายได้สุทธิ (บาท) | Ratio (Continuous) | 2050, 6560 |
+| `status` | สถานะการจอง | Nominal | Checked-Out, Cancelled, Confirmed |
 
-### Table 3: `dim_rate_codes` (Rate Conditions)
-| Field | Description |
-|---|---|
-| `rate_code_id` (PK) | รหัสราคา |
-| `rate_name` | ชื่อราคา |
-| `is_commissionable` | เงื่อนไขว่าคิดคอมมิชชันหรือไม่ |
+### Table 2: `dim_channels` (ตารางข้อมูลช่องทางการจัดจำหน่าย)
+| Attribute | Description | Data Type | Valid Range/Example |
+| :--- | :--- | :--- | :--- |
+| `channel_id` (PK) | รหัสอ้างอิงช่องทาง | Nominal | CH_01, CH_02 |
+| `channel_name` | ชื่อแพลตฟอร์มการจอง | Nominal | Booking.com, Direct Web |
+| `channel_type` | ประเภทของช่องทาง | Nominal | OTA, Direct, Wholesale |
+| `commission_model` | รูปแบบการคิดค่าธรรมเนียม | Nominal | Percentage, Flat Fee, Merchant |
+| `default_commission_rate`| อัตราค่าธรรมเนียมมาตรฐาน | Ratio (Continuous) | 0.15, 500, 0 |
+| `contract_owner` | พนักงานขายที่รับผิดชอบสัญญา | Nominal | Alice, Bob, Charlie |
 
-### Table 4: `fact_marketing_spend` (Marketing Costs)
-| Field | Description |
-|---|---|
-| `spend_id` (PK) | รหัสรายการใช้จ่าย |
-| `spend_date` | วันที่ใช้จ่าย |
-| `channel_id` (FK) | รหัสช่องทางโฆษณา (Google Ads / Facebook) |
-| `cost_amount` | ค่าใช้จ่ายทางการตลาด |
-| `clicks` | จำนวนคลิกที่ได้รับ |
+### Table 3: `dim_rate_codes` (ตารางข้อมูลแพ็กเกจราคา)
+| Attribute | Description | Data Type | Valid Range/Example |
+| :--- | :--- | :--- | :--- |
+| `rate_code_id` (PK) | รหัสประเภทแพ็กเกจราคา | Nominal | RT_PROMO, RT_CORP |
+| `rate_name` | ชื่อแพ็กเกจราคา | Nominal | Promotional, Corporate |
+| `is_commissionable` | เงื่อนไขว่าแพ็กเกจนี้คิดคอมมิชชันหรือไม่ | Nominal (Boolean) | True / False |
+
+### Table 4: `fact_marketing_spend` (ตารางข้อมูลค่าใช้จ่ายการตลาด)
+| Attribute | Description | Data Type | Valid Range/Example |
+| :--- | :--- | :--- | :--- |
+| `spend_id` (PK) | รหัสรายการลงโฆษณา | Nominal | SP_001, SP_002 |
+| `spend_date` | วันที่บันทึกค่าใช้จ่าย | Interval (Date) | 2023-01-01, 2023-02-01 |
+| `channel_id` (FK) | รหัสช่องทาง (มักเชื่อมกับ Direct) | Nominal | CH_03 |
+| `platform` | แพลตฟอร์มที่ลงโฆษณา | Nominal | Google Ads, Facebook |
+| `cost_amount` | ค่าใช้จ่ายทางการตลาด (บาท) | Ratio (Continuous) | 6428, 13135 |
+| `clicks` | จำนวนคลิกที่ได้รับจากโฆษณา | Ratio (Continuous) | 1752, 556 |
+
+---
+
+## Data Preparation & Cleansing 
+- **Data Integration:** เชื่อมต่อข้อมูล (Merge) ตาราง `fact_bookings` กับ `dim_channels` และ `dim_rate_codes` แบบ Star Schema / Galaxy Schema
+- **Remove Financial Noise:** ตั้งค่า `calculated_net_revenue` ของบุ๊กกิ้งที่มีสถานะ **Cancelled ให้เป็น 0** เพื่อป้องกันตัวเลขรายได้พองโตเกินจริง (Overstated Revenue)
+- **Opportunity Cost Calculation:** สร้างคอลัมน์เก็บมูลค่าความเสียหายจากห้องที่ถูกยกเลิก เพื่อวัดขนาดของ Revenue Leakage
+- **Feature Engineering:**
+  - สกัดข้อมูลวันที่ (Datetime) เพื่อสร้างตัวแปร `is_weekend`
+  - แบ่งประเภทวันเข้าพักเป็น **Weekday (Mon-Fri)** และ **Weekend (Sat-Sun)**
+- **True Net Profit Logic:** กระจายต้นทุนค่าการตลาด (Marketing Spend) เข้าไปในทุกบุ๊กกิ้งของ Direct Web เพื่อหา **True Net ADR** ที่หักต้นทุนแฝงครบทุกมิติ
+
 ---
 
 ## การสำรวจและวิเคราะห์ข้อมูล (Exploratory Data Analysis - EDA)
@@ -103,16 +112,16 @@ T (Time-bound): วัดผลภายใน 1 ไตรมาส (3 เดื
 * **การนำเสนอ:** ใช้ Stacked Bar Chart เพื่อให้เห็นองค์ประกอบของรายได้รวม ว่าถูกแบ่งเป็นกำไรที่โรงแรมได้จริง และต้นทุนที่ต้องจ่ายออกไปอย่างละเท่าไหร่
 <img width="984" height="584" alt="image" src="https://github.com/user-attachments/assets/bdeca9c0-22cf-4791-a77e-cdfe7dc7e3ab" />
 
-### 2. Hidden Costs: Opportunity Cost from Cancellations by Channel
-* **เป้าหมาย:** ประเมินมูลค่าความเสียหายทางธุรกิจ (Opportunity Cost) หรือ "ต้นทุนแฝง" ที่เกิดจากการยกเลิกห้องพัก (Cancellations) แยกตามช่องทาง
-* **ผลการวิเคราะห์:** พบว่าช่องทาง OTA สร้างมูลค่าการสูญเสียรายได้ (Revenue Leakage) จากการยกเลิกห้องพักมหาศาลที่สุด ซึ่งเป็นความเสี่ยงที่โรงแรมต้องแบกรับไว้เมื่อเทียบกับช่องทางอื่นๆ
-* **การนำเสนอ:** ใช้ Bar Chart เพื่อเปรียบเทียบมูลค่าความเสียหายที่เป็นตัวเงิน (บาท) ให้ผู้บริหารเห็นภาพขนาดของรายได้ที่รั่วไหลได้อย่างชัดเจน
-<img width="984" height="584" alt="image" src="https://github.com/user-attachments/assets/f753ac54-d8cc-4a00-9bd0-563f573eb8e0" />
-
-### 3. True Cost of Acquisition (COA %) by Channel
+### 2. True Cost of Acquisition (COA %) by Channel
 * **เป้าหมาย:** หาต้นทุนการได้ลูกค้าที่แท้จริง (True COA) โดยนำ "ค่าใช้จ่ายการตลาด (Marketing Spend)" มารวมกับ "ค่าคอมมิชชัน" เพื่อพิสูจน์ความคุ้มค่าของแต่ละช่องทาง
 * **ผลการวิเคราะห์:** พบ Insight สำคัญว่า Direct Web ที่ดูเหมือนไม่ต้องเสียค่า Commission เลย กลับมีต้นทุน COA พุ่งสูงลิ่วเมื่อรวมกับค่ายิง Ads สะท้อนให้เห็นว่าการทำการตลาดทำได้ไม่คุ้มค่าเท่าที่ควร
 * **การนำเสนอ:** ใช้ Bar Chart เปรียบเทียบสัดส่วนเปอร์เซ็นต์ COA เพื่อให้เห็นต้นทุนรวมในการได้ลูกค้า 1 คนของแต่ละช่องทาง
+<img width="984" height="584" alt="image" src="https://github.com/user-attachments/assets/f753ac54-d8cc-4a00-9bd0-563f573eb8e0" />
+
+### 3. Hidden Costs: Opportunity Cost from Cancellations by Channel
+* **เป้าหมาย:** ประเมินมูลค่าความเสียหายทางธุรกิจ (Opportunity Cost) หรือ "ต้นทุนแฝง" ที่เกิดจากการยกเลิกห้องพัก (Cancellations) แยกตามช่องทาง
+* **ผลการวิเคราะห์:** พบว่าช่องทาง OTA สร้างมูลค่าการสูญเสียรายได้ (Revenue Leakage) จากการยกเลิกห้องพักมหาศาลที่สุด ซึ่งเป็นความเสี่ยงที่โรงแรมต้องแบกรับไว้เมื่อเทียบกับช่องทางอื่นๆ
+* **การนำเสนอ:** ใช้ Bar Chart เพื่อเปรียบเทียบมูลค่าความเสียหายที่เป็นตัวเงิน (บาท) ให้ผู้บริหารเห็นภาพขนาดของรายได้ที่รั่วไหลได้อย่างชัดเจน
 <img width="984" height="584" alt="image" src="https://github.com/user-attachments/assets/cf2b36fb-ab05-4b65-88dd-4391b9875d8a" />
 
 ### 4. Final Net Profit by Channel (After ALL Costs)
