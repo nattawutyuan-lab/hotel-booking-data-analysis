@@ -173,5 +173,5 @@
 
 ---
 
-- [Presentation (PDF)](present/azurestay_high_distribution_costs.pdf)
-- [Presentation (Link)]([Link Canva](https://canva.link/1w2ql0p8tkfg3ql))
+- [Presentation (PDF)](present/Azure Stay Strategic Distribution & Profit Optimization_compressed.pdf)
+- ([Presentation (Link)](https://canva.link/1w2ql0p8tkfg3ql))
