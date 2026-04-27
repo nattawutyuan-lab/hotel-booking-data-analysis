@@ -3,6 +3,8 @@
 ## Azure Stay: High Distribution Costs (Channel Profitability)
 
 การวิเคราะห์เพื่อเพิ่มประสิทธิภาพช่องทางการจัดจำหน่ายและเพิ่มกำไรสุทธิสูงสุดให้กับธุรกิจโรงแรม
+<img width="1030" height="576" alt="image" src="https://github.com/user-attachments/assets/2e0e5703-ae9f-4899-8d61-074e74cc7f1e" />
+
 
 ---
 
