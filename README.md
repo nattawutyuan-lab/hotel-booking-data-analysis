@@ -49,7 +49,8 @@
 ### 3. Hypothesis 3: วิเคราะห์พฤติกรรมการเข้าพักและผลตอบแทนตามช่วงเวลา
 * **What to explore:**  ต้องการวิเคราะห์พฤติกรรมการเข้าพักระหว่าง "วันธรรมดา" และ "วันหยุด" ว่ามีความแตกต่างกันอย่างไร ทั้งในปริมาณการจองผ่านแต่ละช่องทาง และความสามารถในการทำกำไรต่อห้อง เพื่อใช้เป็นแนวทางในแบ่งกลุ่มลูกค้า
 * **Why this chart is appropriate:** ใช้ Bar Chart 2 กราฟควบคู่กัน โดยกราฟแรกแสดงระดับความเสี่ยง และกราฟที่สองแสดงผลกระทบทางธุรกิจ ทำให้สามารถวิเคราะห์ได้ทั้งเชิงสัดส่วนและมูลค่าพร้อมกันอย่างครบถ้วน 
-<img width="1783" height="584" alt="Hypothesis 3 Weekend vs Weekday Performance" src="https://github.com/user-attachments/assets/b4877af3-557c-4610-8fe0-07c7c2abcb68" />
+<img width="984" height="584" alt="image" src="https://github.com/user-attachments/assets/3e1125e7-d5eb-4541-aca8-1807e3ae1697" />
+
 
 ---
 
