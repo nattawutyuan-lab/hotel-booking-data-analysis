@@ -145,7 +145,6 @@
 ### Insight 1: The Profit Gap (ยอดขายรวม vs กำไรที่แท้จริง)
 * **ปัญหา:** หลังจากนำรายได้มาหักลบต้นทุนแฝงทั้งหมด (Commission ของ OTA และ Marketing ของ Direct Web) พบว่าแม้ Direct Web จะไม่เสียค่าคอมมิชชัน แต่ต้นทุนการตลาดที่สูงมากทำให้กำไรสุทธิ (Net Profit) ลดลงอย่างมีนัยสำคัญ เมื่อเทียบกับยอดขายรวม (Gross Revenue)
 * **Recommendation:**
-  * **Audit Marketing Efficiency:** ตรวจสอบประสิทธิภาพการยิงโฆษณาของ Direct Web ทันที เนื่องจากค่าใช้จ่ายสูงแต่ Conversion อาจไม่คุ้มค่า เพื่อลดงบประมาณที่สูญเปล่า
   * **Convert OTA to Direct Loyalty:** นำเสนอสิทธิพิเศษ (In-stay incentives) ให้แก่ลูกค้าที่จองผ่าน OTA เมื่อมาเช็คอิน เพื่อดึงเข้าสู่ระบบสมาชิก (Loyalty Program) หวังผลให้เกิดการจองตรงในครั้งถัดไป
 * **Impact:** ลดต้นทุนการหาลูกค้า (CAC) ในระยะยาว และเพิ่มอัตรากำไรสุทธิจากการจองโดยตรงที่ไม่มีทั้งค่าคอมมิชชันและค่าแอด
 <img width="1184" height="683" alt="image" src="https://github.com/user-attachments/assets/e361fb52-3545-449c-b615-1f110330c37e" />
