@@ -170,3 +170,7 @@
 * **Recommendation:** ควรวิเคราะห์ฐานลูกค้าหลัก เพื่อทำโฆษณาแบบเจาะจงเป้าหมาย แทนการยิงแอดแบบกว้างๆ เพื่อเพิ่มประสิทธิภาพ Content และลดงบการตลาดที่สูญเปล่าช่วยเพิ่มอัตราการคลิกและลดงบประมาณการตลาดที่ไม่จำเป็นลง
 * **Impact:** ลดต้นทุนการจัดจำหน่าย ดันยอดจองจากช่องทางที่คุ้มค่าส่งผลให้กำไรสุทธิเติบโตขึ้น
 <img width="1873" height="805" alt="image" src="https://github.com/user-attachments/assets/c859c368-5fd0-44d5-9b4d-7552d56a6eba" />
+
+---
+
+- 📄 [Presentation (PDF)](present/azurestay_high_distribution_costs.pdf)
