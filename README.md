@@ -161,3 +161,9 @@
 * **Recommendation:** ผลักดันแคมเปญ "Book Direct & Get More" เพื่อจูงใจลูกค้าที่มีความตั้งใจพักจริง (High-intent customers) เช่น มอบสิทธิ Early Check-in หรือ Food Credit และควรพิจารณาเรียกเก็บเงินมัดจำในทุกช่องทางเพื่อลดความเสี่ยงจากการยกเลิกกะทันหัน
 * **Impact:** เพิ่มอัตราการเข้าพักจริง (Occupancy Rate) ลดปัญหาห้องว่างกะทันหัน และลดภาระค่าคอมมิชชันสะสมจาก OTA ส่งผลให้ธุรกิจเติบโตอย่างยั่งยืน
 <img width="1181" height="683" alt="image" src="https://github.com/user-attachments/assets/ac994764-ec5a-4e7f-a1ec-69961ac706f0" />
+
+### Insight 4: Commission vs. Marketing Cost Per Checked-Out Booking (ค่าใช้จ่ายของ Marketing และ Commission ต่อการเข้าพัก)
+* **ปัญหา:** ต้องการดูคุณภาพของการทำ Marketing เมื่อเทียบกับที่ต้องเสียค่า Commission ให้กับ OTA
+* **Recommendation:** ควรวิเคราะห์ฐานลูกค้าหลัก เพื่อทำโฆษณาแบบเจาะจงเป้าหมาย แทนการยิงแอดแบบกว้างๆ เพื่อเพิ่มประสิทธิภาพ Content และลดงบการตลาดที่สูญเปล่าช่วยเพิ่มอัตราการคลิกและลดงบประมาณการตลาดที่ไม่จำเป็นลง
+* **Impact:** ลดต้นทุนการจัดจำหน่าย ดันยอดจองจากช่องทางที่คุ้มค่าส่งผลให้กำไรสุทธิเติบโตขึ้น
+<img width="1873" height="805" alt="image" src="https://github.com/user-attachments/assets/c859c368-5fd0-44d5-9b4d-7552d56a6eba" />
